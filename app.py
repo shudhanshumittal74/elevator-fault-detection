@@ -571,7 +571,7 @@ def style_risk(val):
 
 styled_fleet = (
     fleet_df.style
-    .applymap(style_risk,   subset=["Risk Score"])
+    .map(style_risk, subset=["Risk Score"])
     .set_properties(**{"background-color": "#161b22", "color": "#c9d1d9", "border": "1px solid #30363d"})
     .set_table_styles([{
         "selector": "th",
